@@ -1,6 +1,4 @@
 
-**1. Explain the technical concept:**
-
 📘 **MODULE_LICENSE Macro in Linux Kernel Modules**:
 
 Within the context of Linux kernel modules, `MODULE_LICENSE` is a macro that specifies the license of the module. It’s crucial because it informs the kernel about the licensing terms of the module. Proper use of the `MODULE_LICENSE` macro ensures transparency about the module's licensing, helping maintainers and users understand if the module adheres to open-source principles.
@@ -17,11 +15,11 @@ When an arbitrary string that's not recognized by the kernel is provided to the 
 
 ❓ **If I use a random string as the value for the `MODULE_LICENSE` macro, how will the kernel respond when the module is loaded?**
 
-📝 **Answer**: If you use an arbitrary or random string that's not recognized by the kernel for the `MODULE_LICENSE` macro, the kernel will treat the module as one without a clear or known license. Consequently, when this module is loaded, the kernel will become "tainted," indicating it's in a potentially unsupported state.
+📝 **Answer**: If you use an arbitrary or random string that's not recognized by the kernel for the `MODULE_LICENSE` macro, the kernel will treat the module as one without a clear or known license. 
+- Consequently, when this module is loaded, the kernel will become "tainted," indicating it's in a potentially unsupported state.
 
 ---
 
-**3. Explain the concept in simple words:**
 
 💡 **Understanding `MODULE_LICENSE` in Everyday Terms**:
 
