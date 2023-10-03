@@ -1,9 +1,9 @@
 
-**1. Explain the technical concept:**
-
 📘 **Understanding Kernel Tainting in Linux**:
 
-In the Linux kernel, "tainting" refers to marking the kernel with a flag indicating that its current state is not officially supported by the Linux kernel community. This concept is primarily used to indicate the loading of non-open-source or proprietary modules into the kernel. It serves as a cautionary flag for developers and maintainers, alerting them to the fact that the kernel has been altered in some way that may make subsequent bug reports less reliable.
+In the Linux kernel, "tainting" refers to marking the kernel with a flag indicating that its current state is not officially supported by the Linux kernel community.
+-  This concept is primarily used to indicate the loading of non-open-source or proprietary modules into the kernel. 
+- It serves as a cautionary flag for developers and maintainers, alerting them to the fact that the kernel has been altered in some way that may make subsequent bug reports less reliable.
 
 📌 **How to check for a tainted kernel**:
 
@@ -13,9 +13,13 @@ In the Linux kernel, "tainting" refers to marking the kernel with a flag indicat
   $ cat /proc/sys/kernel/tainted
   ```
 
-- If the return is `0`, the kernel isn't tainted. Any other number highlights the reasons for its tainted state.
+- If the return is `0`, the kernel isn't tainted. 
+- Any other number highlights the reasons for its tainted state.
   
-- The script `kernel-chktaint` can be used to decode the tainted number. It's available at: [kernel-chktaint script](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/tools/debugging/kernel-chktaint).
+![](./Screenshot%20from%202023-10-02%2019-59-20.png)
+
+- The script `kernel-chktaint` can be used to decode the tainted number. 
+- It's available at: [kernel-chktaint script](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/plain/tools/debugging/kernel-chktaint).
 
 ---
 
@@ -23,7 +27,8 @@ In the Linux kernel, "tainting" refers to marking the kernel with a flag indicat
 
 ❓ **What happens if we omit the `MODULE_LICENSE` macro in the C code?**
 
-📝 **Answer**: Not specifying the `MODULE_LICENSE` macro will mark the kernel as tainted when the module is loaded. The kernel views it as a module without a proper license declaration, potentially a non-open-source one.
+📝 **Answer**: Not specifying the `MODULE_LICENSE` macro will mark the kernel as `tainted` when the module is loaded. 
+- The kernel views it as a module without a proper license declaration, potentially a non-open-source one.
 
 ❓ **What will `modinfo` display for a module without the `MODULE_LICENSE` macro?**
 
@@ -34,8 +39,6 @@ In the Linux kernel, "tainting" refers to marking the kernel with a flag indicat
 📝 **Answer**: Loading the module more than once will not change the tainted status (i.e., if the kernel is tainted on the first load, it remains tainted on subsequent loads). However, depending on the module's implementation and functionality, loading it multiple times might cause unexpected behaviors or errors.
 
 ---
-
-**3. Explain the concept in simple words:**
 
 💡 **Kernel Tainting in a Nutshell**:
 
