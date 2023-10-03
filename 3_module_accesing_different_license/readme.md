@@ -1,4 +1,7 @@
+```bash
 $make V=1
+```
+
 Setting verbose for make V=1 to make , to check all the logs. 
 
 ---
@@ -47,8 +50,7 @@ To resolve this issue, there are a couple of approaches:
 
 ## Conclusion
 
-In Linux Kernel Development, respecting the license of the modules and the symbols is crucial. Violating GPL can lead to legal consequences and is against the open-source philosophy of contributing and sharing knowledge and code. Developers need to be mindful of the licenses of the code they are using and must make efforts to resolve any license discrepancies to contribute to a healthy open-source ecosystem.
+In Linux Kernel Development, respecting the license of the modules and the symbols is crucial. 
+- Violating GPL can lead to legal consequences and is against the open-source philosophy of contributing and sharing knowledge and code.
+- Developers need to be mindful of the licenses of the code they are using and must make efforts to resolve any license discrepancies to contribute to a healthy open-source ecosystem.
 
-## Interview Question
-
-This can be a good interview question as it helps to assess the candidate's understanding of Linux Kernel Module development, licensing knowledge, especially regarding GPL, and how to resolve licensing conflicts in kernel modules. This question can reveal the depth of a candidate’s knowledge in open-source licensing agreements and their implications in software development.
